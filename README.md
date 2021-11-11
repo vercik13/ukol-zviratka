@@ -19,7 +19,7 @@ Tentokrát není zadání postup krok za krokem, na poustu věcí si musíš př
 	![ukázka](ukazka.jpg)
 
 
-4. Obrázky si asi dej do `src/assets`, abys k nim pak mohla jednoduše přistupovat odkudkoliv.
+4. Obrázky ze složky `images` uvnitř `html-vzor` nemusíš do `src` kopírovat. V datech o zvířatkách (viz. další kroky) budou odkazy na obrázky přímo z internetu. Do aplikace si potřebuješ zkopírovat pouze obrázek `zoo.jpg`, který se v CSS používá jako pozadí celé stránky. Nezapomeň v CSS upravit cestu tak, aby správně reflektovala jeho nové umístění.
 
 5. V hlavní APP si vytvoř stavovou proměnnou. Použij effect, který při prvním zobrazení aplikace stáhne data o zvířatech.
 
