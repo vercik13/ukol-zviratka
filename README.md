@@ -16,7 +16,7 @@ Tentokrát není zadání postup krok za krokem, na poustu věcí si musíš př
 
 	Vezmi vzorové HTML a CSS a rozkouskuj ho do příslušných komponent.
 
-	![ukázka](ukazka.jpg)
+	![ukázka rozložení komponent](ukazka.jpg)
 
 
 4. Obrázky ze složky `images` uvnitř `html-vzor` nemusíš do `src` kopírovat. V datech o zvířatkách (viz. další kroky) budou odkazy na obrázky přímo z internetu. Do aplikace si potřebuješ zkopírovat pouze obrázek `zoo.jpg`, který se v CSS používá jako pozadí celé stránky. Nezapomeň v CSS upravit cestu tak, aby správně reflektovala jeho nové umístění.
