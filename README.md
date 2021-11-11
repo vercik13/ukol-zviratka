@@ -26,7 +26,6 @@ Tentokrát není zadání postup krok za krokem, na poustu věcí si musíš př
 	Data najdeš na adrese:
 	```
 	https://lrolecek.github.io/zviratka-api/zvirata.json
-
 	```
 
 	Podívej se, jak data vypadají: [ukázka](https://lrolecek.github.io/zviratka-api/zvirata.json). Nepotřebuješ k nim žádný API klíč, jsou veřejně přístupná.
