@@ -27,8 +27,7 @@ Tentokrát není zadání postup krok za krokem, na poustu věcí si musíš př
 	```
 	https://lrolecek.github.io/zviratka-api/zvirata.json
 	```
-
-	Podívej se, jak data vypadají: [ukázka](https://lrolecek.github.io/zviratka-api/zvirata.json). Nepotřebuješ k nim žádný API klíč, jsou veřejně přístupná.
+	Podívej se, jak data vypadají: [ukázka](https://lrolecek.github.io/zviratka-api/zvirata.json). Nepotřebuješ k nim žádný API klíč, jsou veřejně přístupná. Stačí udělat `fetch` na tuto adresu a data jsou tvoje.
 
 6. Postup je "jednoduchý":
 
