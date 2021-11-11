@@ -49,3 +49,13 @@ Tentokrát není zadání postup krok za krokem, na poustu věcí si musíš př
 
 8. V detailu zvířete zobraz jména zoologických zahrad, kde se zvíře nachází.
 
+
+## Bonus 2
+
+Extra bonus pro šprtky a šprty:
+
+9. Vyrob komponentu `Search` a umísti ji nad seznam zvířat. V komponentě bude textové pole, do kterého lze psát.
+
+10. Zařiď, aby se v seznamu zvířat zobrazovala jen ta zvířata, jejichž český nebo latinský nápis obsahuje napsaný text. Tj. komponenta `Search` musí komunikovat do `App`, jaká data má `App` vyfiltrovat ze seznamu všech zvířat a jen ty pak poslat do komponenty `AnimalList`.
+
+11. Když hledání nebude odpovídat žádné zvíře, zobrazí se v komponentě hláška o tom, že hledání nic nenašlo.
