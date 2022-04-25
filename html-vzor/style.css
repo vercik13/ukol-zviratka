@@ -1,3 +1,10 @@
+/*
+  Styly společné pro celou App zkopíruj do hlavního CSS.
+  Níže jsou pak styly pro jednotlivé komponenty.
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 /* intuitivnejsi box model */
 html { box-sizing: border-box; }
 *, ::after, ::before { box-sizing: inherit; }
@@ -48,10 +55,11 @@ h1 {
 }
 
 
+/* komponenta AnimalList nepotřebuje žádné styly */
+
 
 /* styly pro komponentu Animal */
-
-.zvire {
+.animal {
   display: flex;
   align-items: center;
   padding: 15px;
@@ -59,34 +67,34 @@ h1 {
   cursor: pointer;
 }
 
-.zvire:hover {
+.animal:hover {
   background-color: #f2e7da;
 }
 
-.zvire + .zvire {
+.animal + .animal {
   border-top: 1px solid #ddd;
 }
 
-.zvire__foto {
+.animal__image {
   flex: 0 0 100px;
 }
 
-.zvire__foto img {
+.animal__image img {
   display: block;
   width: 80px;
   border-radius: 3px;
 }
 
-.zvire__popis {
+.animal__desc{
   flex: 1;
 }
 
-.zvire__nazev {
+.animal__name {
   font-family: 'Merriweather', serif;
   font-size: 18px;
 }
 
-.zvire__latinsky {
+.animal__latin {
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   color: #888;
@@ -101,46 +109,46 @@ h1 {
   background-color: white;
 }
 
-.detail__hlavicka {
+.detail__header {
   position: relative;
   height: 400px;
 }
 
-.detail__foto {
+.detail__image {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.detail__titulek {
+.detail__title {
   position: absolute;
   bottom: -30px;
   left: 30px;
   transform: rotate(-3deg);
 }
 
-.detail__nazev {
+.detail__name {
   margin: 0;
   font-family: 'Merriweather', serif;
   font-size: 48px;
   line-height: 1;
 }
 
-.detail__nazev span {
+.detail__name span {
   display: inline-block;
   padding: 10px 20px;
   background-color: #b95818;
   color: white;
 }
 
-.detail__latinsky {
+.detail__latin {
   margin: 5px 0 0 0;
   font-family: 'Merriweather', serif;
   font-size: 24px;
   line-height: 1;
 }
 
-.detail__latinsky span {
+.detail__latin span {
   display: inline-block;
   padding: 10px 20px;
   background-color: #930438;
@@ -152,34 +160,27 @@ h1 {
 
 }
 
-.detail__popis {
-  font-family: 'Merriweather', serif;
+.detail__desc {
   font-size: 16px;
   line-height: 1.6;
 }
 
-.detail__udaje {
+.detail__items {
   margin: 30px 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 20px 30px;
 }
 
-.detail__udaj h3 {
+.detail__item h3,
+.detail__zoo h3 {
   margin: 0 0 5px 0;
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   color: #999;
 }
 
-.detail__udaj p {
+.detail__item p,
+.detail__zoo p {
   margin: 5px 0;
 }
-
-.detail__zoo {
-  margin: 30px 0;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
-}
-

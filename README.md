@@ -1,14 +1,57 @@
-# Zvířátka
+# Domácí úkol: Zvířátka
 
-Tvým cílem je vyrobit aplikaci, která zobrazuje seznam zvířátek v ZOO. Když klikneš na zvířátko v seznamu, zobrazí se vpravo jeho detailní popis.
+Za úkol máš vyrobit aplikaci, která zobrazuje seznam zvířátek v ZOO. Když klikneš na zvířátko v seznamu, zobrazí se vpravo jeho detailní popis.
 
 Tentokrát není zadání postup krok za krokem, na poustu věcí si musíš přijít sama.
 
-1. Udělej si fork tohoto repozitáře, naklonuj si ho na disk a spusť `npm install`.
+- [Fork zadání na GitHubu](#fork-zadání-na-githubu)
 
-2. Aplikaci budeš tvořit jako vždy ve složce `src`. Když se ale podíváš do složky `html-vzor`, máš tam připravený vzhled aplikace v podobě hotového HTML, CSS a připravených obrázků.
+![ukázka výsledku](ukazka-vysledku.jpg)
 
-3. Vytvoř si komponenty:
+
+## Fork zadání na GitHubu
+
+Tentokrát **nebudeš** vytvářet aplikaci úplně od začátku pomocí `create-czechitas-app`, ale postupuj následovně:
+
+1. Předpokládáme, že máš účet na GitHubu. Pokud ne, zaregistruj si ho a přihlaš se do něj.
+2. Udělej si fork tohoto repozitáře se zadáním (tím se ti úkol zkopíruje do tvého GitHub účtu).
+3. Naklonuj si repozitář ze svého GitHub účtu k sobě na disk.
+4. Až budeš mít úkol hotový (viz. dále), tak nezapomeň udělat commit a push zpět na GitHub.
+5. Úkol budeš odevzdávat jako odkaz na GitHub se svým zpracovaným řešením.
+
+Pokud nevíš, jak s Gitem a GitHubem pracovat, zeptej se nás na Slacku nebo se prosím podívej na následující videa. Jsou z jiného kurzu, ale vše platí i pro náš kurz:
+
+* [Úvod do Gitu](https://www.youtube.com/watch?v=hda4-ngFEWM)
+* [GitHub](https://www.youtube.com/watch?v=JLzWjJjsLz8)
+* [GitHub Fork](https://www.youtube.com/watch?v=K7rE3jRCjD4)
+
+
+
+## Instalace a spuštění
+
+1. I když ty sama jsi projekt nezakládala z nuly pomocí `create-czechitas-app`, projekt je vytvořený pomocí tohoto nástroje a používá se úplně stejně. Jen už v sobě obsahuje i nějaké další připravené podklady, jako obrázky a údaje o filmech.
+
+2. Otevři si v editoru složku projektu, kterou sis z GitHubu naklonovala k sobě na disk. Složka, kterou otevíráš, by měla obsahovat soubor `package.json` (a další soubory a složky).
+
+3. Otevři si v editoru terminál / příkazovou řádku a spusť příkaz:
+
+	```
+	npm install
+	```
+
+	Tím se ti do projektu doinstalují všechny potřebné balíčky závislostí stejně, jako kdybys projekt vytvářela/instalovala pomocí `create-czechitas-app`.
+
+4. Známým způsobem zkus projekt spustit. Měla bys vidět stránku, na které je nadpis *Zvířátka v ZOO*.
+
+
+
+## Zadání úkolu
+
+Tvým cílem je vytvořit stránku, která bude zobrazovat na levé straně seznam zvířat a na pravé straně detail vybraného zvířete.
+
+1. Aplikaci budeš tvořit jako vždy ve složce `src`. Když se ale podíváš do složky `html-vzor`, máš tam připravený vzhled aplikace v podobě hotového HTML, CSS a připravených obrázků.
+
+2. Vytvoř si komponenty:
 
 	- `AnimalList` - to bude seznam všech zvířátek na levé straně obrazovky
 	- `Animal` - to bude jedno zvířátko v seznamu (je v něm malá fotečka a český a latinský název)
@@ -16,12 +59,12 @@ Tentokrát není zadání postup krok za krokem, na poustu věcí si musíš př
 
 	Vezmi vzorové HTML a CSS a rozkouskuj ho do příslušných komponent.
 
-	![ukázka rozložení komponent](ukazka.jpg)
+	![ukázka rozložení komponent](rozlozeni-komponent.jpg)
 
 
-4. Obrázky ze složky `images` uvnitř `html-vzor` nemusíš do `src` kopírovat. V datech o zvířatkách (viz. další kroky) budou odkazy na obrázky přímo z internetu. Do aplikace si potřebuješ zkopírovat pouze obrázek `zoo.jpg`, který se v CSS používá jako pozadí celé stránky. Nezapomeň v CSS upravit cestu tak, aby správně reflektovala jeho nové umístění.
+3. Obrázky ze složky `images` uvnitř `html-vzor` nemusíš do `src` kopírovat. V datech o zvířatkách (viz. další kroky) budou odkazy na obrázky přímo z internetu. Do aplikace si potřebuješ zkopírovat pouze obrázek `zoo.jpg`, který se v CSS používá jako pozadí celé stránky. Nezapomeň v CSS upravit cestu tak, aby správně reflektovala jeho nové umístění.
 
-5. V hlavní APP si vytvoř stavovou proměnnou. Použij effect, který při prvním zobrazení aplikace stáhne data o zvířatech.
+4. V hlavní APP si vytvoř stavovou proměnnou. Použij effect, který při prvním zobrazení aplikace stáhne data o zvířatech.
 
 	Data najdeš na adrese:
 	```
@@ -35,11 +78,12 @@ Tentokrát není zadání postup krok za krokem, na poustu věcí si musíš př
 	- v `App` zobraz komponenty `AnimalList` a `AnimalDetail`
 	- do `AnimalList` předej načtená data
 	- v `AnimalList` zobraz seznam zvířat - pro každé zvíře v poli jedna komponenta `Animal`
-	- v `AnimalList` reaguj na kliknutí na `Animal` - pokud k tomu dojde, řekni rodičovské komponentě, jaké zvíře má zobrazit komponenta `AnimalDetail`
+	- v `AnimalList` reaguj na kliknutí na `Animal` - pokud k tomu dojde, řekni rodičovské komponentě (App), jaké zvíře se má zobrazit uvnitř komponenty `AnimalDetail`
+	- po startu aplikace (a po načtení dat) se automaticky zobrazí první zvíře v seznamu
 
-## Bonus
+## Bonus 1
 
-7. V datech o každém zvířeti je i pole nazvané `zoo`, které obsahuje identifikátory Zoologických zahrad, ve kterých si můžeš zvíře prohlédnout.
+7. V datech o každém zvířeti je i pole nazvané `zoo`, které obsahuje identifikátory zoologických zahrad, do kterých se můžeš jít na dané zvířátko podívat.
 
 	Seznam Zoologických zahrad si můžeš načíst z adresy:
 	```
