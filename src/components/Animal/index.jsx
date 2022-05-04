@@ -3,10 +3,10 @@ import './style.css';
 
 
 
-const Animal = ({image, name, latin,}) => {
+const Animal = ({id, image, name, latin, onAnimalClick}) => {
     return (
         
-        <div className="animal">
+        <div className="animal" onClick={() => {onAnimalClick(id)}}>
             <div className="animal__image">
                 <img src={image} alt="slon" />
             </div>

@@ -9,6 +9,12 @@ const App = () => {
 
 
   const [animals, setAnimals] = useState([]);
+  const [animalId, setAnimalId] = useState({});
+
+  const onChooseAnimal = (id) => {
+    const choosenAnimal = animals.find(animal => animal.id === id)
+    setAnimalId(choosenAnimal)
+  }
 
 
 
@@ -18,8 +24,10 @@ const App = () => {
       .then(response => response.json())
       .then(data => {
         setAnimals(data.zvirata);
-      })
-  })
+        setAnimalId(data.zvirata[0])
+      });
+  },
+[]);
 
 
 
@@ -28,8 +36,8 @@ const App = () => {
       <h1>Zvířátka v ZOO</h1>
 
       <div className="container">
-        <AnimalList animals={animals}/>
-        <AnimalDetail />
+        <AnimalList onAnimalClick={onChooseAnimal} animals={animals}/>
+        <AnimalDetail animal={animalId}/>
       </div>
     </>
   );
